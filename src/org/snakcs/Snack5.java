@@ -15,6 +15,9 @@ public class Snack5 {
 		int oddMedia = 0;
 		int oddNum = 0;
 		
+		int min = Integer.MAX_VALUE;
+		int max = Integer.MIN_VALUE;
+		
 		Random random = new Random();
 		for (int i = 0; i < num; i++) {
 			int randNum = random.nextInt(101);
@@ -33,13 +36,23 @@ public class Snack5 {
 				oddNum ++;
 				//System.out.println(randNum);
 			}
+			if(randNum<min) {
+				min =randNum;
+			}
+			
+			if(randNum>max) {
+				max =randNum;
+			}
 		}
 		
 		//System.out.println(oddNum);
 		System.out.println("somma"+ sum);
-		System.out.println("somma numeri pari" + evenSum);
-		System.out.println( "media"+sum / num);
+		System.out.println("somma numeri pari " + evenSum);
+		System.out.println( "media "+sum / num);
 		System.out.println("media numeri dispari "+ oddMedia /oddNum );
+		System.out.println("min: " +min);
+		System.out.println("max: " +max);
+		
 		sc.close();
 	}
 }
