@@ -13,13 +13,14 @@ public class snack6 {
 		
 		Random random = new Random();
 		
-		for(int i =0;i<lim;i++) {
+		while(sum < lim) {
 			int randNum = random.nextInt(101);
 			if(sum<lim) {
 				
 				sum += randNum;
-			}
-			
+		}
+		
+	
 			
 		}
 		System.out.println(sum);
